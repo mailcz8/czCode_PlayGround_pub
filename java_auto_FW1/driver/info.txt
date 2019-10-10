@@ -1,0 +1,9 @@
+total 61304
+drwxr-xr-x  8 czheng  ADAPTIVE\Domain Users   272B Sep 18 13:28 ./
+drwxr-xr-x  8 czheng  ADAPTIVE\Domain Users   272B Sep 18 14:02 ../
+-r-xr-xr-x  1 czheng  ADAPTIVE\Domain Users   2.5M Sep 18 13:28 IEDriverServer.exe*
+-r-xr-xr-x  1 czheng  ADAPTIVE\Domain Users    10M Sep 18 13:28 chromedriver*
+-r-xr-xr-x  1 czheng  ADAPTIVE\Domain Users   7.9M Sep 18 13:28 chromedriver.exe*
+-r-xr-xr-x  1 czheng  ADAPTIVE\Domain Users   3.4M Sep 18 13:28 geckodriver*
+-r-xr-xr-x  1 czheng  ADAPTIVE\Domain Users   5.7M Sep 18 13:28 geckodriver.exe*
+-rw-r--r--  1 czheng  ADAPTIVE\Domain Users     0B Sep 18 13:27 info.txt
