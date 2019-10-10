@@ -1,0 +1,48 @@
+git commands:
+git branch -avv // show all branches
+git --help 
+
+// clone a repo
+git clone https://github.com/mailcz8/<repoName>.git
+
+// create new local branch
+git branch <demoBranchName>
+git checkout <demoBranchName>
+git checkout -b <demoBranchName> (create a new branch and switch after create)
+
+// create remote branch
+git branch --set-upstream-to=origin/<branch> <demoBranchName>
+git branch --set-upstream-to=origin/master <demoBranchName>
+git push origin javaBranchTest1
+
+// delete a local branch and remote branch
+git branch -d <demoBranchName> //local branch
+git push origin --delete <demoBranchName> //remote branch
+
+// git remote
+git remote -v
+git remote show origin
+
+
+// git check-ins
+git add . || git add -all || git add -i
+git commit -a -m "message" & git push
+git push -u origin master
+
+// for files 
+git reset .classpath
+
+=== git stash ===
+git stash
+git stash list [<options>]
+git stash show [<stash>]
+git stash drop [-q|--quiet] [<stash>]
+git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>] (Bring the stash code back)
+git stash branch <branchname> [<stash>]
+git stash clear
+git stash create [<message>]
+git stash store [-m|--message <message>] [-q|--quiet] <commit>
+
+=== git clean ===
+git clean -df (clean/delete not checked-in stuff you don't want/need in the branch)
+

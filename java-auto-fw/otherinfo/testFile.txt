@@ -1,0 +1,185 @@
+   17  git branch -u
+   18  git branch -u origin/master
+   19  git push -u origin master
+   20  cd ..
+   21  rm -rf appiumWS/
+   22  ls
+   23  git clone https://github.com/mailcz8/appiumWS.git
+   24  cd appiumWS/
+   25  ll
+   26  git branch -avv
+   27  ls
+   28  cd ..
+   29  ll
+   30  cd appiumWS/
+   31  ls -al
+   32  git branch
+   33  git branch -avv
+   34  git status
+   35  echo test-output/* >> .gitignore
+   36  ls
+   37  ls -al
+   38  git status
+   39  cd libs/
+   40  ls
+   41  cd ..
+   42  ls -al
+   43  git add .gitignore
+   44  git status
+   45  git commit -m "add gitignore config file"
+   46  git push
+   47  git status
+   48  git add -i
+   49  git status
+   50  git add -i
+   51  git add .classpath .project
+   52  git status
+   53  git add bin/
+   54  git status
+   55  git checkout .classpath
+   56  git status
+   57  git reset .classpath
+   58  git status
+   59  git add .classpath libs
+   60  git status
+   61  git reset bin/
+   62  git status
+   63  git add src/
+   64  git status
+   65  git commit -m "adding src files and jars"
+   66  git status
+   67  git push
+   68  echo bin/ >> .gitignore
+   69  cat .gitignore
+   70  vim .gitignore
+   71  cat .gitignore
+   72  git status
+   73  git commit -a -m "update gitignore file"
+   74  git push
+   75  git status
+   76  pwd
+   77  cd c:pwd
+   78  cd c:
+   79  pwd
+   80  ls
+   81  mkdir github
+   82  cd github/
+   83  git clone https://github.com/mailcz8/appiumWS.git
+   84  cd appiumWS/
+   85  ll
+   86  ls -al
+   87  pwd
+   88  cd ..
+   89  git clone https://github.com/mailcz8/javaSandbox.git
+   90  ls
+   91  cd javaSandbox/
+   92  ls
+   93  echo bin/ >> .gitignore
+   94  cat .gitignore
+   95  ls
+   96  git commit -am "add gitignore file"
+   97  git status
+   98  git commit -a -m "add gitignore file"
+   99  git add .gitignore
+  100  git commit -m "add gitignore"
+  101  git status
+  102  git push
+  103  git status
+  104  git branch
+  105  ls
+  106  git --help
+  107  ls -al
+  108  ll
+  109  ls
+  110  git rm bin/
+  111  git rm -r bin/
+  112  ls
+  113  git status
+  114  git commit -m "remove bin folder"
+  115  git push
+  116  git rm testnote.txt
+  117  git commit -m ""; git push
+  118  git commit -m "del"; git push
+  119  git status
+  120  git branch javaBranchTest1
+  121  git branch
+  122  git checkout javaBranchTest1
+  123  git status
+  124  git status
+  125  git add
+  126  git add .
+  127  git status
+  128  git commit -m "hahah"
+  129  git push
+  130  git branch
+  131  git push origin javaBranchTest1
+  132  git branch -avv
+  133  git push -d appiumWS
+  134  git push -d origin appiumWS
+  135  history
+  136  git status
+  137  git checkout master
+  138  git branch -a
+  139  git branch javaBranchTest2
+  140  git branch
+  141  git checkout javaBranchTest2
+  142  git status
+  143  git checkout javaBranchTest1
+  144  git status
+  145  history
+  146  git status
+  147  git branch -d javaBranchTest1
+  148  git checkout javaBranchTest2
+  149  git status
+  150  git branch -d javaBranchTest1
+  151  git branch -D javaBranchTest1
+  152  git remote -v
+  153  git status
+  154  git remove show origin
+  155  git remote show origin
+  156  history
+  157  git status
+  158  git push -d origin javaBranchTest1
+  159  git remote show -v
+  160  git remote show origin
+  161  git checkout master
+  162  git status
+  163  git branch -a
+  164  git branch -avv
+  165  git status
+  166  git branch javaBranchTest1
+  167  git status
+  168  git branch -a
+  169  history
+  170  git status
+  171  git remote show origin
+  172  history
+  173  git push origin javaBranchTest1
+  174  git push origin javaBranchTest2
+  175  git status
+  176  git branch -avv
+  177  git branch -vv
+  178  git pull
+  179  git checkout javaBranchTest2
+  180  git pull
+  181  ls
+  182  git pull origin javaBranchTest2
+  183  git checkout javaBranchTest2
+  184  git checkout javaBranchTest3
+  185  git checkout javaBranchTest1
+  186  git pull
+  187  git pull origin javaBranchTest1
+  188  history
+  189  git checkout master
+  190  git branch
+  191  git push -d origin javaBranchTest2
+  192  git status
+  193  git branch
+  194  git branch -vv
+  195  git branch -avv
+  196  ls
+  197  git branch -d javaBranchTest2
+  198  git branch -avv
+  199  git branch
+  200  git status
+  201  git checkout javaBranchTest1

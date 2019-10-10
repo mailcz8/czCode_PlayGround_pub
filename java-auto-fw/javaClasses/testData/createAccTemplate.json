@@ -1,0 +1,26 @@
+{
+  "name": "test-scenario",
+  "classname": "com.adaptiveinsights.testdata.api.scenario.Scenario",
+  "description": "Test Services Framework Planning test scenario",
+  "failureMode": "continue-on-error",
+  "isDisabled": false,
+  "configuration": {
+    "instance": "tsf_greenco_1",
+    "cluster": "liveqa17"
+  },
+  "steps": [
+    {
+      "name": "create accounts",
+      "description": "create account",
+      "api": "planning-create-account",
+      "is-disabled": false,
+      "request-body": {
+        "server": "serverNameForCreateAccount",
+        "instance": "instanceName",
+        "accountPrefix": "accountPrefixTestDataAccount",
+        "parentId": parentIdNumber,
+        "count": numberOfAccountToBeCreated
+      }
+    }
+  ]
+}
