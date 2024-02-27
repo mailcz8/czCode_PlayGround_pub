@@ -1,0 +1,39 @@
+name: run_api_test_newman_sample
+on:
+  pull_request:
+    branches:
+      - "*"
+      - release
+      - master
+jobs:
+  run_api_sample_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: List api test directory
+        run: |
+          ls -al python_robot_FW/tests/api
+          mkdir test_result
+      - name: Install Newman
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra
+
+      - name: Run newman sample api BAT test
+        run: |
+          newman run "python_robot_FW/tests/api/api_sample/postman_samples.postman_collection.json" -r cli,htmlextra --reporter-htmlextra-export test_result/api_test_report.html
+      - name: Publish Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Reports
+          path: test_result
+
+      - name: Output summary to console
+        run: echo ${{ steps.run-newman.outputs.summary }}
+        
+      - name: Save state
+        run: echo "{name}={value}" >> $GITHUB_STATE
+
+      - name: Set output
+        run: echo "{name}={value}" >> $GITHUB_OUTPUT
