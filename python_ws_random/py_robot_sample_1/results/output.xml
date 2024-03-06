@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.10.7 on win32)" generated="20230531 09:57:14.380" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot Call Py" source="C:\Users\ChangZheng\dev\bin\robot_call_py_lib\robot_call_py.robot">
+<test id="s1-t1" name="Run function add">
+<kw name="Run python def function add">
+<kw name="Add" library="my_math">
+<arg>2</arg>
+<arg>4</arg>
+<msg timestamp="20230531 09:57:14.645" level="INFO">Call function: 2 + 4 = 24</msg>
+<status status="PASS" starttime="20230531 09:57:14.645" endtime="20230531 09:57:14.645"/>
+</kw>
+<status status="PASS" starttime="20230531 09:57:14.644" endtime="20230531 09:57:14.645"/>
+</kw>
+<kw name="Main" library="my_math">
+<msg timestamp="20230531 09:57:14.645" level="INFO">first print: cart_template &lt;string.Template object at 0x000001E812662E30&gt;
+My Cart :
+5 x Books = 90
+40 x Mobile = 100
+2 x Laptop = 900
+10 x Tables = 50
+Toal Price : 1140</msg>
+<status status="PASS" starttime="20230531 09:57:14.645" endtime="20230531 09:57:14.645"/>
+</kw>
+<status status="PASS" starttime="20230531 09:57:14.644" endtime="20230531 09:57:14.645"/>
+</test>
+<test id="s1-t2" name="Run class function add">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id='pricebtn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230531 09:57:14.645" level="INFO">Clicking element '//*[@id='pricebtn']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230531 09:57:14.645" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20230531 09:57:14.645" endtime="20230531 09:57:14.645"/>
+</kw>
+<msg timestamp="20230531 09:57:14.650" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230531 09:57:14.645" endtime="20230531 09:57:14.650"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230531 09:57:14.653" endtime="20230531 09:57:14.654"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230531 09:57:14.654" endtime="20230531 09:57:14.654"/>
+</kw>
+<status status="FAIL" starttime="20230531 09:57:14.645" endtime="20230531 09:57:14.654">No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20230531 09:57:14.383" endtime="20230531 09:57:14.655"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Robot Call Py">Robot Call Py</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
