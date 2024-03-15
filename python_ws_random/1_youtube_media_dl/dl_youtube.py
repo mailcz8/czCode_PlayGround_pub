@@ -51,6 +51,8 @@ class YouTube_DL():
         # result of success
         print(yt.title + " has been successfully downloaded.")
 
+    def pytube_video_mp4(self):
+        pass
 
 if __name__=='__main__':
     x = YouTube_DL()
