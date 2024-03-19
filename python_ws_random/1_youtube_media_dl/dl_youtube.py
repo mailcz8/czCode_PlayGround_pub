@@ -18,6 +18,7 @@ class YouTube_DL():
             # self.youtube_url = "https://www.youtube.com/watch?v=2r7pq4XbUL4" #70、80、90年代经典老歌
             # self.youtube_url = "https://www.youtube.com/watch?v=AMskvxEWf0k" #Big Fish (大魚)
         print("YT dl url set to: ", self.youtube_url)
+        return self.youtube_url
 
     def pytube_mp3_only(self):
         # url input from user
@@ -33,7 +34,7 @@ class YouTube_DL():
             print(err)
 
         # extract only audio
-        video = yt.streams.filter(only_audio=True).first()
+        dl_file = yt.streams.filter(only_audio=True).first()
 
         # check for destination to save file
         print("Enter the destination (leave blank for current directory)")
@@ -41,7 +42,7 @@ class YouTube_DL():
         destination = ".\\new_yt_media_dl"
 
         # download the file
-        out_file = video.download(output_path=destination)
+        out_file = dl_file.download(output_path=destination)
         print("YT audio dl only for: ", yt.title)
         # save the file
         base, ext = os.path.splitext(out_file)

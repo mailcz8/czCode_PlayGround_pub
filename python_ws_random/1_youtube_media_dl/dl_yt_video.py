@@ -65,7 +65,9 @@ print(dir(yt))
 # yt.set_filename('this_youtube_video')
 
 try:
-    stream = yt.streams.get_by_itag(22)
+    # stream = yt.streams.get_by_itag(22) # 720P /24fps video mp4
+    stream = yt.streams.get_by_itag(137) # 1080P /24fps video mp4
+    # stream = yt.streams.get_by_itag(18) # 360p /24fps video mp4
     stream.download(output_path = save_video_path, filename = output_file_name)
     print(f"YouTube video downloaded successfully at {save_video_path} and file name is {output_file_name}.")
 except Exception as error:
