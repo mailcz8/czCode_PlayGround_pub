@@ -1,0 +1,3 @@
+[submodule "golang_ws_1/golang_ws_1/go-full-course-youtube"]
+	path = golang_ws_1/golang_ws_1/go-full-course-youtube
+	url = https://github.com/mailcz8/czCode_PlayGround_pub
