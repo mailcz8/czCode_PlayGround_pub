@@ -9,9 +9,9 @@ import os, re
 # SAVE_PATH = "E:/"  # to_do
 
 # link of the video to be downloaded
-# link = "https://www.youtube.com/watch?v=Wdq_pRXwg_8"
-link = "https://www.youtube.com/watch?v=Q2cMMnUuKYQ"
-# link = "monday"
+link = "https://www.youtube.com/watch?v=Wdq_pRXwg_8"
+# link = "https://www.youtube.com/watch?v=Q2cMMnUuKYQ"
+# link = "https://www.youtube.com/watch?v=1TsVjvEkc4s"
 yt = YouTube(link)
 
 def get_file_path():
@@ -28,7 +28,7 @@ def get_file_path():
     print("Save file to path: ", save_video_path)
     return save_video_path
 
-def dl_yt_media(fileType='mp4',fileSize='1080p'):
+def dl_yt_media(fileType='mp4', videoRes='1080p'):
     save_video_path = get_file_path()
     print("save youTube: ",link," to dir = ", save_video_path)
     try:
@@ -39,32 +39,41 @@ def dl_yt_media(fileType='mp4',fileSize='1080p'):
             file_name = re.split(":| - |\\(|!|;", yt.title.lower())
             file_name = file_name[0].lstrip().rstrip()
             output_file_name = file_name.replace(" ","_")+".mp4"
-            if fileSize=='1080p':
+            if videoRes =='1080p':
                 # 1080P /24fps video mp4
                 # stream = yt.streams.get_by_itag(137) # 1080P /24fps video mp4
                 stream = yt.streams.filter(file_extension='mp4', progressive=True, res='1080p')
-            elif fileSize=='720p':
+                file_name_2nd_half = "_1080p.mp4"
+            elif videoRes =='720p':
                 # 720P /24fps video mp4
                 # stream = yt.streams.get_by_itag(22) # 720P /24fps video mp4
                 stream = yt.streams.filter(file_extension='mp4', progressive=True, res='720p')
+                file_name_2nd_half = "_720p.mp4"
+            elif videoRes =='high':
+                # 720P /24fps video mp4
+                # stream = yt.streams.get_by_itag(22) # 720P /24fps video mp4
+                stream = yt.streams.filter(file_extension='mp4', progressive=True)
+                file_name_2nd_half = "_high.mp4"
             else:
                 # 360p /24fps video mp4
                 # stream = yt.streams.get_by_itag(18) # 360p /24fps video mp4
                 stream = yt.streams.filter(file_extension='mp4', progressive=True, res='360p')
+                file_name_2nd_half = "_360.mp4"
         if fileType.lower() in ('audio', 'mp3', 'audio_only', 'song', 'songs'):
             file_name = re.split(":| - |\\(|!|;", yt.title.lower())
             file_name = file_name[0].lstrip().rstrip()
             output_file_name = file_name.replace(" ","_")+".mp3"
         else:
-            temp_title = datetime.now().strftime("%Y%m%d_%H%M%S")+"_yt_video_dl"+".mp4"
-            output_file_name = temp_title.replace(" ","_")+".mp4"
-            stream = yt.streams.filter(file_extension='mp4', progressive=True)
+            temp_title = datetime.now().strftime("%Y%m%d_%H%M%S")+"_yt_video_dl"
+            output_file_name = temp_title.replace(" ","_")+file_name_2nd_half
+            print("YouTuble file name is: "+output_file_name)
+            # stream = yt.streams.filter(file_extension='mp4', progressive=True)
         # print("YT file deatil: ", yt.streams)
         print(f"Downloading YouTube video successfully at {save_video_path} and file name is {output_file_name}.")
         # stream = yt.streams.get_by_itag(22) # 720P /24fps video mp4
         # stream = yt.streams.get_by_itag(137) # 1080P /24fps video mp4
         # stream = yt.streams.get_by_itag(18) # 360p /24fps video mp4
-        # stream.download(output_path = save_video_path, filename = output_file_name)
+        stream.download(output_path = save_video_path, filename = output_file_name)
         print(f"YouTube video downloaded successfully at {save_video_path} and file name is {output_file_name}.")
     except Exception as E:
         print("Connection Error")  # to handle exception
